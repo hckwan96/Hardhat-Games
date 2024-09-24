@@ -16,8 +16,8 @@ contract Game2 {
   event Winner(address winner);
 
   function win() public {
-    require(x > 0 && y > 0);
-    require(x + y == 50);
+    require(x > 0 && y > 0, "x and y not greater than 0");
+    require(x + y == 50, "x + y not equal 50");
     emit Winner(msg.sender);
   }
 }
